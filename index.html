@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lophix Boutique — Clothes & The Woman</title>
+  <meta name="description" content="Lophix Boutique is a premium women's fashion house in Lekki Phase 1, Lagos, offering curated dresses, corporate wear, shoes, bags, and accessories for the modern woman." />
+  <meta name="keywords" content="Lophix Boutique, luxury fashion Lagos, women's fashion Lekki, corporate wear Nigeria, designer dresses Lagos" />
+  <meta name="author" content="Lophix Boutique" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lophix Boutique — Clothes & The Woman" />
+  <meta property="og:description" content="Premium women's fashion in Lekki Phase 1, Lagos. Dresses, corporate wear, shoes, bags, perfumes and accessories." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_NG" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='Playfair Display, serif' fill='%23111111'%3EL%3C/text%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <span class="loader__mark">L</span>
+  </div>
+
+  <!-- ============ SKIP LINK (ACCESSIBILITY) ============ -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER / NAVIGATION ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar" aria-label="Primary">
+      <a href="#home" class="navbar__logo" aria-label="Lophix Boutique home">
+        <span class="navbar__logo-mark">L</span>
+        <span class="navbar__logo-text">Lophix<em>Boutique</em></span>
+      </a>
+
+      <ul class="navbar__menu" id="navbarMenu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#collections" class="nav-link">Collections</a></li>
+        <li><a href="#new-arrivals" class="nav-link">New Arrivals</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="navbar__actions">
+        <button class="icon-btn" id="searchToggle" aria-label="Open search" aria-expanded="false" aria-controls="searchPanel">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="icon-btn" id="wishlistToggle" aria-label="Open wishlist" aria-expanded="false" aria-controls="wishlistPanel">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.5 2 5 5.6 5c2 0 3.4 1 4.4 2.4C11 6 12.4 5 14.4 5 18 5 19.5 8.5 22 11.9 19.5 16.4 12 21 12 21z"/></svg>
+          <span class="icon-btn__badge" id="wishlistCount">0</span>
+        </button>
+        <button class="icon-btn" id="cartToggle" aria-label="Open shopping cart" aria-expanded="false" aria-controls="cartPanel">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+          <span class="icon-btn__badge" id="cartCount">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navbarMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Search Panel -->
+    <div class="search-panel" id="searchPanel" role="search">
+      <div class="search-panel__inner">
+        <input type="text" id="searchInput" placeholder="Search dresses, shoes, bags…" aria-label="Search products" />
+        <button class="icon-btn" id="searchClose" aria-label="Close search">✕</button>
+      </div>
+      <div class="search-panel__results" id="searchResults"></div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow reveal">Lekki Phase 1, Lagos</p>
+        <h1 class="hero__title">
+          <span class="reveal reveal--delay-1">Luxury Fashion</span>
+          <span class="reveal reveal--delay-2">for Every Woman</span>
+        </h1>
+        <p class="hero__text reveal reveal--delay-3">
+          Lophix Boutique curates dresses, corporate wear, shoes, bags, and accessories
+          for the woman who dresses with intention. Every piece is chosen to move with her —
+          into the boardroom, the wedding, the weekend.
+        </p>
+        <div class="hero__actions reveal reveal--delay-4">
+          <a href="#collections" class="btn btn--primary">Shop Collection</a>
+          <a href="#contact" class="btn btn--ghost">Visit Boutique</a>
+        </div>
+      </div>
+      <a href="#collections" class="scroll-indicator" aria-label="Scroll to collections">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ SIGNATURE MARQUEE STRIP ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Clothes & The Woman</span>
+        <span>&#10022;</span>
+        <span>Lekki Phase 1, Lagos</span>
+        <span>&#10022;</span>
+        <span>Clothes & The Woman</span>
+        <span>&#10022;</span>
+        <span>Lekki Phase 1, Lagos</span>
+        <span>&#10022;</span>
+        <span>Clothes & The Woman</span>
+        <span>&#10022;</span>
+        <span>Lekki Phase 1, Lagos</span>
+        <span>&#10022;</span>
+      </div>
+    </div>
+
+    <!-- ============ FEATURED COLLECTIONS ============ -->
+    <section class="section" id="collections">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Shop by category</p>
+          <h2 class="section__title reveal">Featured Collections</h2>
+        </div>
+
+        <div class="collections-grid" id="collectionsGrid">
+          <!-- Cards injected/enhanced by script.js but present in markup for no-JS fallback -->
+          <a href="#new-arrivals" class="collection-card reveal" data-filter="dresses">
+            <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80" alt="Woman in an elegant evening dress" loading="lazy" />
+            <div class="collection-card__label"><h3>Dresses</h3><span>Shop now →</span></div>
+          </a>
+          <a href="#new-arrivals" class="collection-card reveal" data-filter="corporate">
+            <img src="https://images.unsplash.com/photo-1548126466-4470dfd3a209?auto=format&fit=crop&w=700&q=80" alt="Woman in tailored corporate wear" loading="lazy" />
+            <div class="collection-card__label"><h3>Corporate Wear</h3><span>Shop now →</span></div>
+          </a>
+          <a href="#new-arrivals" class="collection-card reveal" data-filter="casual">
+            <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=700&q=80" alt="Woman in relaxed casual outfit" loading="lazy" />
+            <div class="collection-card__label"><h3>Casual Wear</h3><span>Shop now →</span></div>
+          </a>
+          <a href="#new-arrivals" class="collection-card reveal" data-filter="shoes">
+            <img src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?auto=format&fit=crop&w=700&q=80" alt="Pair of luxury women's heels" loading="lazy" />
+            <div class="collection-card__label"><h3>Shoes</h3><span>Shop now →</span></div>
+          </a>
+          <a href="#new-arrivals" class="collection-card reveal" data-filter="bags">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" alt="Structured leather handbag" loading="lazy" />
+            <div class="collection-card__label"><h3>Bags</h3><span>Shop now →</span></div>
+          </a>
+          <a href="#new-arrivals" class="collection-card reveal" data-filter="accessories">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=700&q=80" alt="Gold jewelry and accessories" loading="lazy" />
+            <div class="collection-card__label"><h3>Accessories</h3><span>Shop now →</span></div>
+          </a>
+          <a href="#new-arrivals" class="collection-card reveal" data-filter="perfumes">
+            <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=80" alt="Luxury perfume bottle" loading="lazy" />
+            <div class="collection-card__label"><h3>Perfumes</h3><span>Shop now →</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED PRODUCTS ============ -->
+    <section class="section section--tint" id="products">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Handpicked for you</p>
+          <h2 class="section__title reveal">Featured Products</h2>
+        </div>
+
+        <div class="product-toolbar reveal">
+          <div class="product-filters" id="productFilters">
+            <button class="filter-chip active" data-filter="all">All</button>
+            <button class="filter-chip" data-filter="dresses">Dresses</button>
+            <button class="filter-chip" data-filter="corporate">Corporate</button>
+            <button class="filter-chip" data-filter="casual">Casual</button>
+            <button class="filter-chip" data-filter="shoes">Shoes</button>
+            <button class="filter-chip" data-filter="bags">Bags</button>
+            <button class="filter-chip" data-filter="accessories">Accessories</button>
+          </div>
+        </div>
+
+        <div class="product-grid" id="productGrid">
+          <!-- Product cards are rendered by script.js from the PRODUCTS data array -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container about__inner">
+        <div class="about__media reveal">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Interior of Lophix Boutique showroom" loading="lazy" />
+        </div>
+        <div class="about__content reveal">
+          <p class="eyebrow">Our story</p>
+          <h2 class="section__title">Dressed With Intention</h2>
+          <p>
+            Lophix Boutique opened on Emma Abimbola Cole Street in Lekki Phase 1 with one
+            conviction: that what a woman wears should meet her, not compete with her.
+            We source dresses, corporate wear, shoes, bags, and accessories that hold their
+            shape through a full day — the meeting, the event, the drive home.
+          </p>
+          <p>
+            Every piece on our rail is chosen for construction first, trend second. Quality
+            fabric, a clean finish, a fit that photographs as well as it feels. That's the
+            Lophix standard, and it's why women return season after season.
+          </p>
+          <ul class="about__stats">
+            <li><strong>7+</strong><span>Years on Lekki Phase&nbsp;1</span></li>
+            <li><strong>4,000+</strong><span>Women dressed</span></li>
+            <li><strong>500+</strong><span>Curated pieces in-store</span></li>
+          </ul>
+          <a href="#contact" class="btn btn--primary">Visit the showroom</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY CHOOSE US ============ -->
+    <section class="section section--tint" id="why-us">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">The Lophix difference</p>
+          <h2 class="section__title reveal">Why Choose Us</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l2.4 6.5L21 11l-6.6 2.5L12 20l-2.4-6.5L3 11l6.6-2.5L12 2z"/></svg>
+            </div>
+            <h3>Premium Quality</h3>
+            <p>Every fabric and finish is inspected before it reaches the rail, so what you feel in-store is what you wear out the door.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+            </div>
+            <h3>Latest Fashion Trends</h3>
+            <p>Our buyers track runway and street style across Lagos, London, and Milan, so the collection turns over with the season.</p>
+          </div>
+          <div class="feature-card__icon-wrap"></div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </div>
+            <h3>Affordable Luxury</h3>
+            <p>Direct relationships with our makers mean fewer markups between the workshop and your wardrobe.</p>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Excellent Customer Service</h3>
+            <p>Personal styling, alterations, and honest sizing advice — every visit is one-on-one, never rushed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEW ARRIVALS GALLERY ============ -->
+    <section class="section" id="new-arrivals">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Just landed</p>
+          <h2 class="section__title reveal">New Arrivals</h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Rendered by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section section--dark" id="testimonials">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Words from our clients</p>
+          <h2 class="section__title reveal">Testimonials</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"I've bought every work blazer I own from Lophix for two years. The tailoring holds up, and the staff remember exactly what I like."</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Portrait of Adaeze O." loading="lazy" />
+              <div><strong>Adaeze O.</strong><span>Lekki, Lagos</span></div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"Found my wedding guest dress here in one visit. The fit was perfect off the rail, and the price was fair for the quality."</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?auto=format&fit=crop&w=100&q=80" alt="Portrait of Funmi A." loading="lazy" />
+              <div><strong>Funmi A.</strong><span>Victoria Island, Lagos</span></div>
+            </div>
+          </article>
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__rating" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>"The bag selection alone is worth the drive from Ikoyi. Real leather, honest prices, and the WhatsApp line actually replies fast."</p>
+            <div class="testimonial-card__author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="Portrait of Chiamaka N." loading="lazy" />
+              <div><strong>Chiamaka N.</strong><span>Ikoyi, Lagos</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow reveal">Get in touch</p>
+          <h2 class="section__title reveal">Visit or Reach Us</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <ul class="contact-list">
+              <li>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>10B Emma Abimbola Cole Street, Lekki Phase 1, Lagos, Nigeria</span>
+                </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 3a2 2 0 0 1-.4 2.1L8 10.3a16 16 0 0 0 6 6l1.5-1.4a2 2 0 0 1 2.1-.4c1 .3 2 .5 3 .7a2 2 0 0 1 1.4 2.7z"/></svg>
+                <span>+234 801 234 5678</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                <span>Mon–Sat: 9:00 AM – 7:00 PM · Sun: 12:00 PM – 5:00 PM</span>
+              </li>
+            </ul>
+
+            <a href="https://wa.me/2348012345678" class="btn btn--whatsapp" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1 0 1.3.9 2.5 1.1 2.7.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.2-.3-.3-.6-.4z"/><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg>
+              Chat on WhatsApp
+            </a>
+
+            <div class="social-links">
+              <a href="#" aria-label="Lophix Boutique on Instagram" class="icon-btn">IG</a>
+              <a href="#" aria-label="Lophix Boutique on Facebook" class="icon-btn">FB</a>
+              <a href="#" aria-label="Lophix Boutique on TikTok" class="icon-btn">TT</a>
+            </div>
+
+            <div class="map-embed">
+              <iframe
+                title="Lophix Boutique location on Emma Abimbola Cole Street, Lekki Phase 1"
+                src="https://www.google.com/maps?q=Lekki+Phase+1+Lagos+Nigeria&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="cfName">Full name</label>
+              <input type="text" id="cfName" name="name" required minlength="2" />
+              <span class="form-error" data-for="cfName"></span>
+            </div>
+            <div class="form-row">
+              <label for="cfEmail">Email address</label>
+              <input type="email" id="cfEmail" name="email" required />
+              <span class="form-error" data-for="cfEmail"></span>
+            </div>
+            <div class="form-row">
+              <label for="cfPhone">Phone number</label>
+              <input type="tel" id="cfPhone" name="phone" />
+              <span class="form-error" data-for="cfPhone"></span>
+            </div>
+            <div class="form-row">
+              <label for="cfMessage">Message</label>
+              <textarea id="cfMessage" name="message" rows="4" required minlength="10"></textarea>
+              <span class="form-error" data-for="cfMessage"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+            <p class="form-success" id="formSuccess" role="status" hidden>Thank you — we'll reply within one business day.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#home" class="navbar__logo">
+          <span class="navbar__logo-mark">L</span>
+          <span class="navbar__logo-text">Lophix<em>Boutique</em></span>
+        </a>
+        <p>Clothes & The Woman.<br />10B Emma Abimbola Cole Street, Lekki Phase 1, Lagos.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="#new-arrivals">Dresses</a></li>
+          <li><a href="#new-arrivals">Corporate Wear</a></li>
+          <li><a href="#new-arrivals">Shoes</a></li>
+          <li><a href="#new-arrivals">Bags</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__newsletter">
+        <h4>Newsletter</h4>
+        <p>New arrivals and boutique events, once or twice a month.</p>
+        <form id="newsletterForm" novalidate>
+          <input type="email" id="newsletterEmail" placeholder="Your email address" aria-label="Email address for newsletter" required />
+          <button type="submit" class="btn btn--primary">Join</button>
+        </form>
+        <span class="form-error" data-for="newsletterEmail"></span>
+        <p class="form-success" id="newsletterSuccess" role="status" hidden>You're on the list.</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom container">
+      <p>&copy; <span id="currentYear"></span> Lophix Boutique. All rights reserved.</p>
+      <div class="footer__legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ BACK TO TOP ============ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+  </button>
+
+  <!-- ============ CART DRAWER ============ -->
+  <aside class="drawer" id="cartPanel" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Your Bag</h3>
+      <button class="icon-btn" data-close-drawer aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer__body" id="cartItems"></div>
+    <div class="drawer__foot">
+      <div class="drawer__total"><span>Subtotal</span><strong id="cartSubtotal">₦0</strong></div>
+      <button class="btn btn--primary btn--full">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- ============ WISHLIST DRAWER ============ -->
+  <aside class="drawer" id="wishlistPanel" aria-label="Wishlist" aria-hidden="true">
+    <div class="drawer__head">
+      <h3>Wishlist</h3>
+      <button class="icon-btn" data-close-drawer aria-label="Close wishlist">✕</button>
+    </div>
+    <div class="drawer__body" id="wishlistItems"></div>
+  </aside>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- ============ QUICK VIEW MODAL ============ -->
+  <div class="modal" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle" aria-hidden="true">
+    <div class="modal__panel">
+      <button class="icon-btn modal__close" id="quickViewClose" aria-label="Close quick view">✕</button>
+      <div class="modal__body" id="quickViewBody"></div>
+    </div>
+  </div>
+
+  <!-- ============ IMAGE LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="icon-btn lightbox__close" id="lightboxClose" aria-label="Close image">✕</button>
+    <img id="lightboxImage" src="" alt="" />
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
